@@ -14,9 +14,12 @@ export type ImageType = {
       large: string;
       medium: string;
     };
+    links: {
+      self: string;
+    };
     social: {
       instagram_username: string | null;
-      portfolio_url: string | null;
+      portfolio_url: string;
       twitter_username: string | null;
     };
   };
