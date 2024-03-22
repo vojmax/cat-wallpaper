@@ -1,3 +1,5 @@
+import Actions from "@/components/sections/actions";
+import Artist from "@/components/sections/artist";
 import { getBase64 } from "@/lib/base64";
 import { getWallpaper } from "@/lib/unsplash";
 
@@ -9,20 +11,16 @@ export default async function Home() {
 
   return (
     <main className="flex relative min-h-screen flex-col items-center justify-between">
-      <section className="z-10 h-16 justify-center align-middle">
-        <h1>header</h1>
-      </section>
-      <section className="h-full">
-        <Image
-          className="object-cover w-full h-full"
-          src={image.urls.full}
-          alt={image.alt_description}
-          placeholder="blur"
-          blurDataURL={base64}
-          fill
-        />
-      </section>
-      <section className="z-10 h-16">footer</section>
+      <Artist />
+      <Image
+        className="object-cover w-full h-full"
+        src={image.urls.full}
+        alt={image.alt_description}
+        placeholder="blur"
+        blurDataURL={base64}
+        fill
+      />
+      <Actions />
     </main>
   );
 }
