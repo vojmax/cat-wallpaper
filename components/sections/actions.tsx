@@ -1,6 +1,6 @@
 "use client";
 
-import { UpdateIcon } from "@radix-ui/react-icons";
+import { DownloadIcon, UpdateIcon } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
 
 export default function Actions() {
@@ -16,6 +16,7 @@ export default function Actions() {
           className="font-bold bg-black/30 text-xl text-white border-2 p-8"
           variant={"outline"}
           size={"lg"}
+          name="Update"
         >
           <UpdateIcon className="w-8 h-8 " />
         </Button>
@@ -23,8 +24,9 @@ export default function Actions() {
           className="font-bold bg-black/30 text-xl text-white border-2 p-8"
           variant={"outline"}
           size={"lg"}
+          name="Download"
         >
-          Download
+          <DownloadIcon className="w-8 h-8 font-bold " />
         </Button>
       </div>
     </section>

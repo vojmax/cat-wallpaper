@@ -14,21 +14,21 @@ export default async function Artist({ image }: { image: ImageType }) {
           <AvatarFallback>{image.user.name.slice(0, 1)}</AvatarFallback>
         </Avatar>
       </div>
-      <div className="mt-14">
-        <h1 className="text-3xl font-semibold tracking-tight first:mt-0">
-          {image.alt_description[0].toUpperCase() +
-            image.alt_description.slice(1)}
-        </h1>
+      <div className="mt-12">
+        <p className="text-3xl font-semibold  max-w-2xl truncate text-nowrap mb-1">
+          {image.alt_description.replace(/^./, (str) => str.toUpperCase())}
+        </p>
+
         <Link
           href={image.user.links.html}
-          className="text-xl font-extrabold text-white/80 block"
+          className="text-l font-extrabold block text-white/80  hover:text-sky-400 mb-1"
           target="_blank"
         >
-          {image.user.name}
+          {image.user.name.toUpperCase()}
         </Link>
         {portfolioLink && (
           <Link
-            className="text-amber-300"
+            className=" hover:text-sky-400"
             href={image.user.social.portfolio_url}
             target="_blank"
           >
