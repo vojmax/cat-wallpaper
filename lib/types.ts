@@ -1,11 +1,11 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+// ImageType is a type that describes the structure of the image object that we get from the Unsplash API. Only nececery fields are included.
 
 export type ImageType = {
   id: string | undefined;
   urls: {
-    raw: string | StaticImport;
-    regular: string | StaticImport;
-    full: string | StaticImport;
+    raw: string;
+    regular: string;
+    full: string;
   };
   alt_description: string;
   user: {
@@ -15,7 +15,8 @@ export type ImageType = {
       medium: string;
     };
     links: {
-      self: string;
+      html: string;
+      download: string;
     };
     social: {
       instagram_username: string | null;

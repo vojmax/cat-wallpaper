@@ -3,14 +3,13 @@ import Artist from "@/components/sections/artist";
 import { getBase64 } from "@/lib/base64";
 import { getWallpaper } from "@/lib/unsplash";
 import { ImageType } from "@/lib/types";
-
 import Image from "next/image";
+
+// server component that fetches the wallpaper and renders the artist and actions components.
 
 export default async function Home() {
   const image: ImageType = await getWallpaper();
   const base64 = await getBase64(image);
-
-  // ...
 
   return (
     <main className="flex relative min-h-screen flex-col items-center justify-between">
@@ -23,7 +22,7 @@ export default async function Home() {
         blurDataURL={base64}
         fill
       />
-      <Actions />
+      <Actions image={image} />
     </main>
   );
 }

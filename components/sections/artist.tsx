@@ -3,8 +3,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { ImageType } from "@/lib/types";
 import Link from "next/link";
 
+// Artist is a component that displays the artist's name(unsplash portfolio link), profile picture, and their website of choice if exists(could be paypal, instagram etc).
+
 export default async function Artist({ image }: { image: ImageType }) {
-  const portfolioLink = image.user.social.portfolio_url;
+  const website = image.user.social.portfolio_url;
 
   return (
     <section className="flex z-10 gap-10 w-full h-64 bg-gradient-to-t from-black/0 to-black/60 justify-center text-white ">
@@ -26,7 +28,7 @@ export default async function Artist({ image }: { image: ImageType }) {
         >
           {image.user.name.toUpperCase()}
         </Link>
-        {portfolioLink && (
+        {website && (
           <Link
             className=" hover:text-sky-400"
             href={image.user.social.portfolio_url}
