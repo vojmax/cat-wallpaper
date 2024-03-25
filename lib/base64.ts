@@ -6,7 +6,7 @@ export async function getBase64(wallpaper: ImageType) {
     throw new Error("Regular URL is undefined");
   }
 
-  const buffer = await fetch(wallpaper.urls.regular).then(async (res) =>
+  const buffer = await fetch(String(wallpaper.urls.regular)).then(async (res) =>
     Buffer.from(await res.arrayBuffer())
   );
   const { base64 } = await getPlaiceholder(buffer, { size: 32 });

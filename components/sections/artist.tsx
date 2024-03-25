@@ -7,7 +7,7 @@ export default async function Artist({ image }: { image: ImageType }) {
   const portfolioLink = image.user.social.portfolio_url;
 
   return (
-    <section className="flex z-10 gap-10 w-full h-64 bg-gradient-to-t from-indigo-950/0 to-indigo-950/60 justify-center text-white ">
+    <section className="flex z-10 gap-10 w-full h-64 bg-gradient-to-t from-black/0 to-black/60 justify-center text-white ">
       <div className="mt-10">
         <Avatar className="w-28 h-28  border-4 ">
           <AvatarImage src={image.user.profile_image.large} />

@@ -9,7 +9,7 @@ export default function Actions() {
   };
 
   return (
-    <section className="z-10 w-full h-64 bg-gradient-to-b from-indigo-950/0 to-indigo-950/60">
+    <section className="z-10 w-full h-64 bg-gradient-to-b from-black/0 to-black/60">
       <div className="flex h-full justify-center gap-20 items-center">
         <Button
           onClick={reload}
