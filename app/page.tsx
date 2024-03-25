@@ -14,14 +14,16 @@ export default async function Home() {
   return (
     <main className="flex relative min-h-screen flex-col items-center justify-between">
       <Artist image={image} />
-      <Image
-        className="object-cover w-full h-full"
-        src={image.urls.full}
-        alt={image.alt_description}
-        placeholder="blur"
-        blurDataURL={base64}
-        fill
-      />
+      <div className="w-full h-full">
+        <Image
+          className="object-cover"
+          src={image.urls.full}
+          alt={image.alt_description}
+          placeholder="blur"
+          blurDataURL={base64}
+          fill
+        />
+      </div>
       <Actions image={image} />
     </main>
   );
