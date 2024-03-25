@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <main className="flex relative min-h-svh md:min-h-lvh flex-col items-center justify-between overflow-hidden">
       <Artist image={image} />
-      <div className="w-full h-full">
+      <div className="w-full h-full fixed">
         <Image
           className="object-cover"
           src={image.urls.full}
