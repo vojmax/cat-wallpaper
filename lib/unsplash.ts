@@ -15,6 +15,20 @@ const query = {
   mountain: "mountain",
   beach: "beach",
   universe: "universe",
+  plane: "plane",
+  forest: "forest",
+  ocean: "ocean",
+  desert: "desert",
+  sunset: "sunset",
+  sunrise: "sunrise",
+  moon: "moon",
+  stars: "stars",
+  galaxy: "galaxy",
+  aurora: "aurora",
+  waterfall: "waterfall",
+  river: "river",
+  lake: "lake",
+  pet: "pet",
 };
 
 //fetch random image from unsplash api
@@ -22,7 +36,7 @@ const query = {
 export async function getWallpaper() {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${clientId}&orientation=landscape`,
+      `https://api.unsplash.com/photos/random?client_id=${clientId}&orientation=landscape&query=${query.cat}`,
       {
         cache: "no-store",
       }

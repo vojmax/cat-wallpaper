@@ -37,24 +37,22 @@ export default function Actions({ image }: { image: ImageType }) {
     }
   };
 
-  console.log("slug = ", image.slug);
-
   return (
     <section className="z-10 w-full h-44">
-      <div className="flex h-full justify-center gap-4 sm:gap-10 md:gap-20 items-center transition-all">
+      <div className="flex h-full justify-center gap-4 sm:gap-10 lg:gap-20  items-center transition-all">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
                 onClick={reload}
-                className="font-bold bg-black/50 text-xl text-white border-2 p-6 md:p-8"
+                className="font-bold bg-black/50 text-xl text-white border-2 p-6 lg:p-8"
                 variant={"outline"}
                 size={"lg"}
                 name="Update"
                 id="update"
                 title="Load new image"
               >
-                <UpdateIcon className="w-8 h-8 md:w-10 md:h-10" />
+                <UpdateIcon className="w-8 h-8 lg:w-10 lg:h-10" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -64,7 +62,7 @@ export default function Actions({ image }: { image: ImageType }) {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                className="font-bold bg-black/50 text-xl text-white border-2  p-6 md:py-8 md:px-16"
+                className="font-bold bg-black/50 text-xl text-white border-2  p-6 lg:py-8 lg:px-16"
                 variant={"outline"}
                 size={"lg"}
                 id="download"
@@ -74,7 +72,7 @@ export default function Actions({ image }: { image: ImageType }) {
                   downloadWallpaper(image.urls.raw, image.slug);
                 }}
               >
-                <DownloadIcon className="w-8 h-8 md:w-10 md:h-10" />
+                <DownloadIcon className="w-8 h-8 lg:w-10 lg:h-10" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -85,7 +83,7 @@ export default function Actions({ image }: { image: ImageType }) {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                className="font-bold bg-black/50 text-xl text-white border-2 p-6 md:p-8"
+                className="font-bold bg-black/50 text-xl text-white border-2 p-6 lg:p-8"
                 variant={"outline"}
                 size={"lg"}
                 id="fullscreen"
