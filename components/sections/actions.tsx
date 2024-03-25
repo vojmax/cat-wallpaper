@@ -38,8 +38,8 @@ export default function Actions({ image }: { image: ImageType }) {
   };
 
   return (
-    <section className="z-10 w-full h-64">
-      <div className="flex h-full justify-center gap-20 items-center">
+    <section className="z-10 w-full h-44">
+      <div className="flex h-full justify-center gap-8 sm:gap-20 items-center transition-all">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -49,6 +49,8 @@ export default function Actions({ image }: { image: ImageType }) {
                 variant={"outline"}
                 size={"lg"}
                 name="Update"
+                id="update"
+                title="Load new image"
               >
                 <UpdateIcon className="w-8 h-8" />
               </Button>
@@ -63,7 +65,9 @@ export default function Actions({ image }: { image: ImageType }) {
                 className="font-bold bg-black/50 text-xl text-white border-2 py-8 px-16"
                 variant={"outline"}
                 size={"lg"}
+                id="download"
                 name="Download"
+                title="Download image"
                 onClick={() => {
                   downloadWallpaper(image.urls.raw);
                 }}
@@ -82,8 +86,10 @@ export default function Actions({ image }: { image: ImageType }) {
                 className="font-bold bg-black/50 text-xl text-white border-2 p-8"
                 variant={"outline"}
                 size={"lg"}
+                id="fullscreen"
                 name="fullscreen"
                 onClick={toggleFullscreen}
+                title="Toggle fullscreen"
               >
                 {fullscreen ? (
                   <EnterFullScreenIcon className="w-8 h-8" />

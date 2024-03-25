@@ -7,6 +7,7 @@ const clientId = process.env.UNSPLASH_ACCESS_KEY; //unsplash access key
 const query = {
   cat: "cat",
   dog: "dog",
+  bird: "bird",
   nature: "nature",
   city: "city",
   car: "car",
@@ -21,7 +22,7 @@ const query = {
 export async function getWallpaper() {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${clientId}&orientation=landscape&query=${query.cat}`,
+      `https://api.unsplash.com/photos/random?client_id=${clientId}&orientation=landscape`,
       {
         cache: "no-store",
       }
