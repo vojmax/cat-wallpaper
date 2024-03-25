@@ -1,7 +1,8 @@
 // ImageType is a type that describes the structure of the image object that we get from the Unsplash API. Only nececery fields are included.
 
 export type ImageType = {
-  id: string | undefined;
+  id: string;
+  slug: string;
   urls: {
     raw: string;
     regular: string;

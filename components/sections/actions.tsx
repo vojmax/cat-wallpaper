@@ -37,22 +37,24 @@ export default function Actions({ image }: { image: ImageType }) {
     }
   };
 
+  console.log("slug = ", image.slug);
+
   return (
     <section className="z-10 w-full h-44">
-      <div className="flex h-full justify-center gap-8 sm:gap-20 items-center transition-all">
+      <div className="flex h-full justify-center gap-4 sm:gap-10 md:gap-20 items-center transition-all">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
                 onClick={reload}
-                className="font-bold bg-black/50 text-xl text-white border-2 p-8"
+                className="font-bold bg-black/50 text-xl text-white border-2 p-6 md:p-8"
                 variant={"outline"}
                 size={"lg"}
                 name="Update"
                 id="update"
                 title="Load new image"
               >
-                <UpdateIcon className="w-8 h-8" />
+                <UpdateIcon className="w-8 h-8 md:w-10 md:h-10" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -62,17 +64,17 @@ export default function Actions({ image }: { image: ImageType }) {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                className="font-bold bg-black/50 text-xl text-white border-2 py-8 px-16"
+                className="font-bold bg-black/50 text-xl text-white border-2  p-6 md:py-8 md:px-16"
                 variant={"outline"}
                 size={"lg"}
                 id="download"
                 name="Download"
                 title="Download image"
                 onClick={() => {
-                  downloadWallpaper(image.urls.raw);
+                  downloadWallpaper(image.urls.raw, image.slug);
                 }}
               >
-                <DownloadIcon className="w-8 h-8" />
+                <DownloadIcon className="w-8 h-8 md:w-10 md:h-10" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -83,7 +85,7 @@ export default function Actions({ image }: { image: ImageType }) {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                className="font-bold bg-black/50 text-xl text-white border-2 p-8"
+                className="font-bold bg-black/50 text-xl text-white border-2 p-6 md:p-8"
                 variant={"outline"}
                 size={"lg"}
                 id="fullscreen"
@@ -92,9 +94,9 @@ export default function Actions({ image }: { image: ImageType }) {
                 title="Toggle fullscreen"
               >
                 {fullscreen ? (
-                  <EnterFullScreenIcon className="w-8 h-8" />
+                  <EnterFullScreenIcon className="w-8 h-8 md:w-10 md:h-10" />
                 ) : (
-                  <ExitFullScreenIcon className="w-8 h-8" />
+                  <ExitFullScreenIcon className="w-8 h-8 md:w-10 md:h-10" />
                 )}
               </Button>
             </TooltipTrigger>

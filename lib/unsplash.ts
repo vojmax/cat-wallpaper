@@ -41,16 +41,14 @@ export async function getWallpaper() {
 // set href to url
 // add click to anchor
 // revoke url object
-export async function downloadWallpaper(url: string) {
-  const date = new Date();
-
+export async function downloadWallpaper(url: string, slug: string) {
   try {
     const response = await fetch(url);
     const blob = await response.blob();
     const urlBlob = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = urlBlob;
-    a.download = `wallpaper-${date.toISOString()}.jpg`;
+    a.download = `${slug}.jpg`;
     a.click();
     URL.revokeObjectURL(urlBlob);
   } catch (e) {

@@ -12,7 +12,7 @@ export default async function Home() {
   const base64 = await getBase64(image);
 
   return (
-    <main className="flex relative min-h-screen flex-col items-center justify-between">
+    <main className="flex relative min-h-dvh flex-col items-center justify-between">
       <Artist image={image} />
       <div className="w-full h-full">
         <Image
