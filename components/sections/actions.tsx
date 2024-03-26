@@ -38,7 +38,7 @@ export default function Actions({ image }: { image: ImageType }) {
   };
 
   return (
-    <section className="z-10 w-full h-24 xl:h-48">
+    <section className="z-10 w-full h-32 xl:h-48">
       <div className="flex h-full justify-center gap-4 sm:gap-10 lg:gap-20  items-center transition-all">
         <TooltipProvider>
           <Tooltip>
