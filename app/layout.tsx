@@ -5,9 +5,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cat Wallpaper",
+  title: "Space wallpapers",
   description:
-    "Brighten up your day with a new cat wallpaper every time you visit this page.",
+    "Get random space wallpapers from unsplash api. Download high quality images for free.",
+  category: "wallpapers",
+  keywords: ["space", "wallpapers", "unsplash"],
+  bookmarks: ["space", "wallpapers", "unsplash"],
+  publisher: "github.com/vojmax",
 };
 
 export default function RootLayout({
