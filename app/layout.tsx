@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   keywords: ["space", "wallpapers", "unsplash"],
   bookmarks: ["space", "wallpapers", "unsplash"],
   publisher: "github.com/vojmax",
+  icons: "icon.ico",
 };
 
 export default function RootLayout({
