@@ -2,41 +2,12 @@
 
 const clientId = process.env.UNSPLASH_ACCESS_KEY; //unsplash access key
 
-// optional query parameters
-
-const query = {
-  cat: "cat",
-  dog: "dog",
-  bird: "bird",
-  nature: "nature",
-  city: "city",
-  car: "car",
-  space: "space",
-  mountain: "mountain",
-  beach: "beach",
-  universe: "universe",
-  plane: "plane",
-  forest: "forest",
-  ocean: "ocean",
-  desert: "desert",
-  sunset: "sunset",
-  sunrise: "sunrise",
-  moon: "moon",
-  stars: "stars",
-  galaxy: "galaxy",
-  aurora: "aurora",
-  waterfall: "waterfall",
-  river: "river",
-  lake: "lake",
-  pet: "pet",
-};
-
-//fetch random image from unsplash api
+//fetch random vertical pet image from unsplash api
 
 export async function getWallpaper() {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${clientId}&orientation=landscape&query=${query.cat}`,
+      `https://api.unsplash.com/photos/random?client_id=${clientId}&orientation=portrait&query=universe`,
       {
         cache: "no-store",
       }
