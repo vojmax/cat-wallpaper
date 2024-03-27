@@ -38,8 +38,8 @@ export default function Actions({ image }: { image: ImageType }) {
   };
 
   return (
-    <section className="z-10 w-full h-32 xl:h-48">
-      <div className="flex h-full justify-center gap-4 sm:gap-10 lg:gap-20  items-center transition-all">
+    <section className="z-10 w-full h-32 2xl:h-48">
+      <div className="flex h-full justify-center gap-4 sm:gap-10 2xl:gap-20  items-center transition-all">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -91,7 +91,7 @@ export default function Actions({ image }: { image: ImageType }) {
                 onClick={toggleFullscreen}
                 title="Toggle fullscreen"
               >
-                {fullscreen ? (
+                {!fullscreen ? (
                   <EnterFullScreenIcon className="w-8 h-8 md:w-10 md:h-10" />
                 ) : (
                   <ExitFullScreenIcon className="w-8 h-8 md:w-10 md:h-10" />
@@ -99,7 +99,7 @@ export default function Actions({ image }: { image: ImageType }) {
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              {fullscreen ? <p>Exit fullscreen</p> : <p>Enter fullscreen</p>}
+              {!fullscreen ? <p>Enter fullscreen</p> : <p>Exit fullscreen</p>}
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
